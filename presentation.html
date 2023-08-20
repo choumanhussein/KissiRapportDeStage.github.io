@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page de Présentation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        position: relative;
+        background-image: url("https://www.capitainestudy.fr/wp-content/uploads/2019/06/ece-1.jpg");
+        background-size: cover;
+      }
+
+      .profile-picture {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+
+      .school-logo {
+        width: 130px;
+        height: 130px;
+        object-fit: cover;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 60px;
+      }
+
+      .title {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        margin-top: 25%;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.606);
+        border-radius: 10px;
+      }
+
+      .button {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #0c0c0c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 40px;
+      }
+
+      .button:hover {
+        background-color: #22fc0e;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="/KISSI/SITE WEB/SITE/IMAGES/1.IMG_PL/IDENTITE1.png"
+      alt="Photo d'identité"
+      class="profile-picture"
+    />
+    <img
+      src="/KISSI/SITE WEB/SITE/IMAGES/logo_ecole.png"
+      alt="Logo de l'école"
+      class="school-logo"
+    />
+
+    <div class="container">
+      <div class="title">
+        Projet de stage de fin d'année ECE BACHELOR 1 2022-2023, "KISSI-BI
+        SAMUEL"
+      </div>
+      <button class="button" onclick="afficherMessage()">
+        <a
+          href="/KISSI/SITE WEB/SITE/ACCEUIL/Acceuil.html"
+          style="text-decoration: none; color: white"
+          >Afficher le fait</a
+        >
+      </button>
+      <p id="message" style="display: none">
+        Le projet de stage concerne ECE BACHELOR 1 2022-2023 et a été réalisé
+        par KISSI-BI SAMUEL.
+      </p>
+    </div>
+
+    <script>
+      function afficherMessage() {
+        var message = document.getElementById("message");
+        message.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

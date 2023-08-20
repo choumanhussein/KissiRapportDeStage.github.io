@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page d'Accueil</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* CSS pour la barre de navigation */
+    nav {
+      background-color: #1cb03c;
+      width: 250px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999px;
+    }
+  
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    li {
+      padding: 15px;
+    }
+  
+    li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+    }
+  
+    li:hover {
+      background-color: #218e23;
+    }
+  
+    /* CSS pour les sous-éléments */
+    ul ul {
+      display: none;
+      background-color:  #074508;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 250px;
+    }
+  
+    li:hover ul {
+      display: block;
+    }
+  
+    /* CSS pour les sous-éléments des éléments principaux */
+    li:hover li ul {
+      display: none;
+    }
+  
+    li:hover li:hover ul {
+      display: block;
+    }
+
+    header h1 {
+  text-align: center;
+  flex: 1; /* Cela permet au titre de prendre l'espace restant */
+  margin-left: 20px; /* Ajustez la marge si nécessaire */
+}
+
+    main {
+      margin-left: 270px; /* Décalage pour ne pas cacher la barre de navigation */
+      padding: 20px;
+    }
+
+    section {
+      margin-top: 50px;
+      margin-bottom: 80px;
+      border-radius: 10px;
+      background-color: #ecfbe9;
+      padding: 20px;
+    }
+
+    #description section{
+     
+      border-radius: 10px;
+      width: 77%;
+      margin-left: 20%;
+      margin-right: 50%;
+      position: sticky;
+   
+
+      }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Styles spécifiques pour les sous-pages */
+    .page_submenu_etudes_mesures {
+      width: 400px;
+    }
+
+    .page_submenu_formations {
+      width: 600px;
+    }
+
+    .page_submenu_pole_industries {
+      height: 37vh;
+    }
+
+    .page_submenu_etudes_mesures{
+        width: 600px;
+    }
+
+    .page_submenu_etudes_métérologie,.page_submenu_etudes_controle_et_inspections,.page_submenu_etudes_réalisations_et_travaux_electricité{
+        width: 600px;
+    }
+
+    .images_bloc{
+        height: 180px;
+    }
+
+    .images_description{
+        height: 300px;
+        width: 30%;
+    }
+
+    .intro {
+  /* Votre style existant pour la section intro ici */
+}
+
+.container,.container2 {
+  display: flex;
+  align-items: center; /* Aligner verticalement le contenu de la div */
+}
+
+.images_description {
+  flex: 0 0 300px; /* Définir la largeur de l'image (ajustez-la selon vos besoins) */
+  margin-right: 20px; /* Espace entre l'image et le texte */
+}
+
+#div_p {
+  flex: 1; /* Fait en sorte que le div occupe tout l'espace restant */
+}
+
+
+section a{
+    margin-top: 120px;
+    position: relative;
+}
+    
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/KISSI/SITE WEB/SITE/ACCEUIL/Acceuil.html">ACCEUIL</a></li>
+      <li><a href="/KISSI/SITE WEB/SITE/SERVICES/Services.html">NOS SERVICES</a></li>
+      <li>
+        <a>POLE SERVICE</a>
+        <ul>
+          <li>
+            <a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/AUDITS/audit.html">Audits</a>
+            <ul>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/AUDITS/audit_diagnostic.html">Audit diagnostic et de certification en QHSE</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/AUDITS/audit_systemes_information.html">Audit des systèmes d’information</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/AUDITS/audit_management_mesure.html">Audit des systèmes de management de mesure</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/AUDITS/audit_reglementaire.html">Audit réglementaire Sécurité et Santé au travail</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/AUDITS/audit_securite_incendie.html">Audit sécurité incendie (IGH, ERP)</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/AUDITS/audit_environnemental.html">Audit environnemental réglementaire de conformité et d’efficacité énergétique</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/CONSEILS/conseils.html">Conseils</a>
+            <ul>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/CONSEILS/accompagnement_mise_en_place.html">Accompagnement pour la mise en place des systèmes de management de la qualité sécurité et environnement</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/CONSEILS/accompagnement_certification.html">Accompagnement en vue de la certification</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/CONSEILS/veille_reglementaire.html">Veille réglementaire</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/CONSEILS/coaching_qse.html">Coaching (suivi personnalisé en Q S E, Management)</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/ETUDES_ET_MESURES/etudes_et_mesures.html">Etudes et mesures</a>
+            <ul class="page_submenu_etudes_mesures">
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/ETUDES_ET_MESURES/etudes_lutte_contre_feu.html">Etudes, Détermination et Installation des moyens de lutte contre le feu (Extincteur, RIA, etc.)</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/ETUDES_ET_MESURES/etudes_eval_risques.html">Réalisation des études de dangers et évaluation des risques , Procédés (HAZOP, HAZID, APR, etc.)</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/ETUDES_ET_MESURES/etudes_plan_evacuation.html">Réalisation de POI et Conception de plan d’évacuation ; Calcul des bilans carbone</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/ETUDES_ET_MESURES/etudes_gestion_dechets.html">Environnement : Réalisation des plans de gestion, Etudes d'impact, Gestion des déchets et Aménagement du cadre de vie</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/ETUDES_ET_MESURES/etudes_analyse_cycle_vie.html">Etudes d’analyse de cycle de vie des produits et processus (SiMapro, etc.)</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/ETUDES_ET_MESURES/etudes_controle_qualite.html">Contrôle qualité et Mesure des paramètres physico-chimiques (Bruit, luminosité, CO2, etc.)</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/ETUDES_ET_MESURES/etudes_satisfaction_client.html">Réalisation d’enquête de satisfaction client (Norme NF X506172)</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/ETUDES_ET_MESURES/etudes_management_mesure.html">Mise en place de système de Management de la Mesure</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/ETUDES_ET_MESURES/etudes_restructuration_entreprises.html">Optimisation de périodicité d'étalonnage- Etude et restructuration des entreprises</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/FORMATIONS/formations.html">Formations</a>
+            <ul class="page_submenu_formations">
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/FORMATIONS/formation_outils_qualite.html">Outils de contrôle de la qualité (5S, 5M, AMDEC, SMED, KABAN, etc.)</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/FORMATIONS/formation_iso.html">ISO 9001, ISO 22000, ISO 14001, ISO 45001, etc..</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/FORMATIONS/formation_securite_incendie.html">Sécurité incendie, ICPE et évaluation des risques</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/FORMATIONS/formation_feux_hydrocarbures.html">Feux d'hydrocarbures et méthodes d'extinction</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/FORMATIONS/formation_eco_conception.html">Eco-conception, traitement et recyclage des déchets, bilan carbone. Système de management QHSE et législation</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/FORMATIONS/formation_management_mesures.html">Système de management des mesures et de la métrologie Formation des auditeurs internes en qualité, sécurité et environnement</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/FORMATIONS/formation_TDM.html">TDM (Transporteurs de Matières Dangereuses). Formation de sauveteurs secouristes du travail (SST)</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/FORMATIONS/formation_equipe_intervention.html">Formation pour les équipiers de première et deuxième intervention (EPI & ESI)</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/FORMATIONS/formation_CHSCT.html">Formation des membres du CHSCT (analyse des risques)</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a>POLE TECHNOLOGIE</a>
+        <ul>
+          <li>
+            <a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/METEROLOGIE/métérologie.html">Métérologie</a>
+            <ul class="page_submenu_etudes_métérologie">
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/METEROLOGIE/dimensionnement_reservoir.html">Dimensionnement du réservoir scanner laser 3D</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/METEROLOGIE/plans_fabrications.html">Réalisation des plans de fabrications</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/METEROLOGIE/inventaire_stocks.html">Inventaire de stocks et Relevé sur site</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/METEROLOGIE/editions_plans.html">Editions des plans pour approbation</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/METEROLOGIE/numérisation_3D.html">Numérisation 3D* Assistance technique</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/METEROLOGIE/baremage_reservoirs.html">Barèmage des réservoirs (Horizontaux, Verticaux, des Sphères, au scanner laser 3D)</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/METEROLOGIE/etalonnage_instruments_mesure.html">Etalonnage des instruments de mesure (Pont bascules, Débitmètres, Balances, Clémur etc.)</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/METEROLOGIE/travaux_tuyauterie.html">Travaux de Tuyauterie : Sablage et peinture</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/CONTROLE_ET_INSPECTIONS/controle_inspection.html">Controle et Inspections</a>
+            <ul class="page_submenu_etudes_controle_et_inspections">
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/CONTROLE_ET_INSPECTIONS/inspection_bacs_tuyauterie.html">Inspection de bacs, tuyauterie, etc. (Détection de défauts, de corrosions et de fissures)</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/CONTROLE_ET_INSPECTIONS/controle_recipients.html">Contrôle de récipients sous pression, inoxydable, alambics en cuivre, non ferreux</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/CONTROLE_ET_INSPECTIONS/controle_epaisseur.html">Contrôle d’épaisseur Contrôle et inspection en électricité (Thermographie infrarouge, Etc.)</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/CONTROLE_ET_INSPECTIONS/mesure_analyse_vibratoire.html">Mesure et analyse Vibratoire</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/CONTROLE_ET_INSPECTIONS/controle_geometrique.html">Contrôle géométrique (Verticalité, Rotondité, Tassement différentiels)</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/CONTROLE_ET_INSPECTIONS/inspection_decennale.html">Inspection Décennale : Réservoirs, Sphères, Tuyauteries, Chaudières</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/CONTROLE_ET_INSPECTIONS/controle_non_destructifs.html">Contrôle Non Destructifs (CND) :» Contrôle US (par Ultrason). Contrôle d’épaisseur (par ultrason)</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/CONTROLE_ET_INSPECTIONS/controle_soudure_radiographie.html">Contrôle par ressuyage. Contrôle par magnétoscopie. Contrôle ACFM. Contrôle MFL. Contrôle de soudure par radiographie</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/VENTE_MATERIELS_ET_EQUIPEMENTS/vente_materiels.html">Vente de matériels et d'équipements</a>
+            <ul>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/VENTE_MATERIELS_ET_EQUIPEMENTS/extincteurs_extinction_feux.html">Extincteurs et systèmes d'extinction des feux</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/VENTE_MATERIELS_ET_EQUIPEMENTS/pictogrammes.html">Pictogrammes</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/VENTE_MATERIELS_ET_EQUIPEMENTS/affiches_panneaux.html">Affiches et panneaux de signalisation etc.</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/VENTE_MATERIELS_ET_EQUIPEMENTS/equipements_protection_individuelle.html">Equipements de Protection Individuelle (EPI): Chaussures, Lunettes, Casques, Blousons</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/REALISATIONS_DE_TRAVAUX_ELECTRICITE/realisations_electricite.html">Réalisations de travaux d'électricité</a>
+            <ul class="page_submenu_etudes_réalisations_et_travaux_electricité">
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/REALISATIONS_DE_TRAVAUX_ELECTRICITE/audit_analyse_reseau_electrique.html">Audit et analyse de réseau électrique</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/REALISATIONS_DE_TRAVAUX_ELECTRICITE/maintenance_electricite.html">Maintenance (Prédictive, Systématique, Palliative et curative)</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/REALISATIONS_DE_TRAVAUX_ELECTRICITE/installation_eclairage.html">Installation de l’éclairage public et intérieur</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/REALISATIONS_DE_TRAVAUX_ELECTRICITE/cablage_armoire_electrique.html">Câblage d’armoire électrique et de Tableautiers (Industriels et Tertiaires)</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/REALISATIONS_DE_TRAVAUX_ELECTRICITE/installation_chauffe_eau.html">Installation de chauffe-eau électrique et de tout autres appareillages</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/REALISATIONS_DE_TRAVAUX_ELECTRICITE/installation_unites_production.html">Installation et câblage des unités de production</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/REALISATIONS_DE_TRAVAUX_ELECTRICITE/installation_groupes_electrogenes.html">Installation de groupes électrogènes</a></li>
+              <li><a href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/REALISATIONS_DE_TRAVAUX_ELECTRICITE/mise_en_conformite_electricite.html">Mise en conformité (électricité)</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a>POLE INDUSTRIES</a>
+        <ul class="page_submenu_pole_industries">
+          <li><a href="/KISSI/SITE WEB/SITE/POLE_INDUSTRIES/recyclage_valorisation_dechets.html">Recyclage et valorisation des dechets</a></li>
+          <li><a href="/KISSI/SITE WEB/SITE/POLE_INDUSTRIES/centrale_incineration_dechets.html">Centrale d'incinération des déchets</a></li>
+          <li><a href="/KISSI/SITE WEB/SITE/POLE_INDUSTRIES/autres.html">Autres </a></li>
+        </ul>
+      </li>
+      <li><a href="/KISSI/SITE WEB/SITE/CONTACTEZ_NOUS/Contactez_nous.html">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <header style="text-align: center; background-color:#218e23; padding: -4px; display: flex; justify-content: space-between; align-items: center; ">
+    <div>
+      <img src="/KISSI/SITE WEB/SITE/IMAGES/LOGO.png" alt="Logo" style="width: 80px; height: 70px; margin-left:260px;margin-top: 5px;">
+    </div>
+    <h1 style="margin: 0;font-family: Apple Chancery, cursive;color: white;">L'expertise et la technologie au service de votre performance!</h1>
+  </header>
+
+         <h2 style="color: black;justify-content: center;display: flex;margin-top: 60px;margin-left: 150px;">CONTROLE RECIPIENT</h2>
+
+  <main style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; padding: 20px;margin-top: 50px;">
+    <section style="width: calc(33.33% - 40px); margin: 20px; border-radius: 10px; background-color:  #ecfbe9; padding: 20px; text-align: center;height: 400px;">
+      <img  class="images_bloc" src="/KISSI/SITE WEB/SITE/IMAGES/CONTRÔLE ET INSPECTION/Contrôle_récipients/alambic en cuivre.jfif" alt="1" style="width: 100%; border-radius: 10px;">
+      <p>
+        
+      </p>
+      <a href="/KISSI/SITE WEB/SITE/CONTACTEZ_NOUS/Contactez_nous.html" style="display: inline-block; background-color: #074508; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Voir plus</a>
+    </section>
+
+    <section style="width: calc(33.33% - 40px); margin: 20px; border-radius: 10px;height: 400px; background-color: #ecfbe9; padding: 20px; text-align: center;">
+      
+      <img  class="images_bloc" src="/KISSI/SITE WEB/SITE/IMAGES/CONTRÔLE ET INSPECTION/Contrôle_récipients/casque_sécurité.jfif" alt="Image 2" style="width: 100%; border-radius: 10px;">
+      <p> 
+
+      </p>
+      <a href="/KISSI/SITE WEB/SITE/CONTACTEZ_NOUS/Contactez_nous.html" style="display: inline-block; background-color: #074508; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Voir plus</a>
+    </section>
+
+    <!-- Ajoutez d'autres conteneurs ici -->
+
+    <section style="width: calc(33.33% - 40px); margin: 20px; border-radius: 10px;height: 400px; background-color: #ecfbe9; padding: 20px; text-align: center;">
+      <h2>
+
+      </h2>
+      <img    class="images_bloc"   src="/KISSI/SITE WEB/SITE/IMAGES/CONTRÔLE ET INSPECTION/Contrôle_récipients/recipient_acier inoxydable.jpg" alt="Image 3" style="width: 100%; border-radius: 10px;">
+      <p>
+
+      </p>
+      <a href="" style="display: inline-block; background-color: #074508; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Voir plus</a>
+    </section>
+
+    <section style="width: calc(33.33% - 40px); margin: 20px; border-radius: 10px;height: 400px; background-color:#ecfbe9; padding: 20px; text-align: center;">
+        <h2>
+
+        </h2>
+        <img    class="images_bloc"   src="/KISSI/SITE WEB/SITE/IMAGES/CONTRÔLE ET INSPECTION/Contrôle_récipients/soupage de sécurité.jfif" alt="Image 3" style="width: 100%; border-radius: 10px;">
+        <p>
+
+        </p>
+        <a href="/KISSI/SITE WEB/SITE/CONTACTEZ_NOUS/Contactez_nous.html" style="display: inline-block; background-color: #074508; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Voir plus</a>
+      </section>
+
+      <section style="width: calc(33.33% - 40px); margin: 20px; border-radius: 10px; height: 400px;background-color: #ecfbe9; padding: 20px; text-align: center;">
+        <h2>
+
+        </h2>
+        <img    class="images_bloc"  src="/KISSI/SITE WEB/SITE/IMAGES/CONTRÔLE ET INSPECTION/Contrôle_récipients/testeur_pression.jfif" alt="Image 3" style="width: 100%; border-radius: 10px;">
+        <p>
+
+        </p>
+        <a href="/KISSI/SITE WEB/SITE/CONTACTEZ_NOUS/Contactez_nous.html" style="display: inline-block; background-color: #074508; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Voir plus</a>
+      </section>
+
+      <section style="width: calc(33.33% - 40px); margin: 20px; border-radius: 10px;height: 400px; background-color: #ecfbe9; padding: 20px; text-align: center;">
+        <h2>
+
+        </h2>
+        <img    class="images_bloc"    src="/KISSI/SITE WEB/SITE/IMAGES/CONTRÔLE ET INSPECTION/Contrôle_récipients/alambic en cuivre.jfif" alt="Image 3" style="width: 100%; border-radius: 10px;">
+        <p>
+
+        </p>
+        <a href="/KISSI/SITE WEB/SITE/CONTACTEZ_NOUS/Contactez_nous.html" style="display: inline-block; background-color: #074508; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Voir plus</a>
+      </section>
+
+  </main>
+
+
+  
+  <div id="description">
+                           
+    <section class="intro sticky-section">
+        <h2>CONTROLE RECIPIENTS</h2>
+        <div class="container">
+        <img  class="images_description"   src="/KISSI/SITE WEB/SITE/IMAGES/CONTRÔLE ET INSPECTION/Contrôle_récipients/soupage de sécurité.jfif" alt="Image Nos Services" >
+        <div id="div_p">
+        <p>
+          Nous proposons aussi des services de controle d'epaisseur pour répondre aux besoins de nos clients, qu'ils soient particuliers ou professionnels. Notre expertise nous permet de garantir une gestion responsable des déchets à chaque étape du processus.
+        </p>
+        <p>
+          Notre équipe de professionnels formés est équipée des dernières technologies pour assurer une collecte sélective efficace des matériaux recyclables tels que le plastique, le papier, le carton et les métaux. Une fois collectés, ces matériaux sont traités dans nos installations spécialisées, où nous utilisons des méthodes respectueuses de l'environnement pour les transformer en matières premières de haute qualité pour les industries de production.
+        </p>
+        <p>
+          De plus, nous sommes fiers de contribuer à la valorisation des déchets organiques grâce au compostage, créant ainsi des amendements naturels pour les sols agricoles et les espaces verts, ce qui favorise une gestion durable des déchets organiques et encourage l'agriculture responsable.
+        </p>
+        <p>
+          Enfin, nous offrons des services de consultation en gestion environnementale, où nous travaillons en étroite collaboration avec nos clients pour les aider à améliorer leurs pratiques de gestion des déchets, réduire leur impact environnemental et atteindre leurs objectifs de durabilité.
+        </p>
+  
+      </div>  
+    </div>
+
+
+    <div id="description">
+                           
+    
+    
+     
+    
+ 
+ 
+</body>
+</html>

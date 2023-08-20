@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aperçu</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        background-image: url("https://www.capitainestudy.fr/wp-content/uploads/2019/06/ece-1.jpg");
+        background-size: cover;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        margin-top: 400px;
+      }
+
+      .section-title {
+        font-size: 28px;
+        font-weight: bold;
+        color: #0d0d0d;
+        margin-bottom: 20px;
+      }
+
+      .video-block {
+        margin-top: 100px;
+        background-color: rgb(10, 10, 10);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(252, 251, 251, 0.97);
+        max-width: 800px;
+        width: 90%;
+      }
+
+      .video-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #fdfffd; /* Couleur verte */
+      }
+
+      .video-iframe {
+        width: 100%;
+        height: 400px;
+      }
+
+      .description {
+        font-size: 18px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="section-title">Aperçu des Vidéos</div>
+
+      <div class="video-block">
+        <h2 class="video-title">Aperçu interne du site web</h2>
+        <iframe
+          class="video-iframe"
+          src="https://www.youtube.com/embed/VdPimoNfHXY"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+        <p class="description">
+          Un aperçu interne du site web qui montre les différentes pages que
+          j'ai codées ainsi que leur architecture
+        </p>
+      </div>
+
+      <div class="video-block">
+        <h2 class="video-title">Aperçu externe</h2>
+        <iframe
+          class="video-iframe"
+          src="https://www.youtube.com/embed/1mpxmgWo2zg"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+        <p class="description">
+          L'aperçu externe simule une petite navigation fluide sur le site web
+          en survolant quelques pages
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

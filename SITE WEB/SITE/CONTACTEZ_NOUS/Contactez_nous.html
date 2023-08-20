@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire d'envoi de message</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        float: left;
+        margin-left: -10%;
+        background-color: rgb(7, 66, 13);
+      }
+
+      .container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 400px;
+        width: 100%;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      button {
+        padding: 10px 15px;
+        background-color: #27f951;
+        color: #0f0f0f;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      .application {
+        background-color: rgb(253, 255, 254);
+        float: right;
+        width: 35%;
+        margin-left: 500px;
+        margin: 150px;
+        margin-bottom: 300px;
+        margin-top: 300px;
+      }
+
+      .image_appli img {
+        background-color: rgb(0, 255, 94);
+        float: right;
+        width: 100%;
+        margin-left: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>ENVOYEZ-NOUS UN MESSAGE</h2>
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label for="nom">Nom :</label>
+          <input type="text" id="nom" name="nom" required />
+        </div>
+        <div class="form-group">
+          <label for="prenom">Prénom :</label>
+          <input type="text" id="prenom" name="prenom" required />
+        </div>
+        <div class="form-group">
+          <label for="sujet">Sujet :</label>
+          <input type="text" id="sujet" name="sujet" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message :</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="telephone">Numéro de téléphone :</label>
+          <input type="tel" id="telephone" name="telephone" required />
+        </div>
+        <div class="form-group">
+          <button type="submit">
+            <a
+              href="/KISSI/SITE WEB/SITE/ACCEUIL/Acceuil.html"
+              style="text-decoration: none"
+            ></a
+            >Envoyer
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+
+  <div class="application">
+    <div><h2>CONNECTEZ-VOUS A PARTIR DE L'APP EN SCANNANT LE CODE QR</h2></div>
+    <div class="image_appli">
+      <img src="/KISSI/SITE WEB/SITE/IMAGES/APPP.png" alt="" />
+    </div>
+
+    <button style="background-color: rgb(251, 253, 251)">
+      <a
+        href="https://app2ist-x97s.glide.page"
+        style="text-decoration: none; color: black"
+        >OU CLIQUEZ ICI</a
+      >
+    </button>
+  </div>
+</html>

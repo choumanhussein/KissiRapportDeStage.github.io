@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page d'Accueil</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      /* CSS pour la barre de navigation */
+      nav {
+        background-color: #1cb03c;
+        width: 250px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        z-index: 9999px;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        padding: 15px;
+      }
+
+      li a {
+        color: white;
+        text-decoration: none;
+        display: block;
+      }
+
+      li:hover {
+        background-color: #218e23;
+      }
+
+      /* CSS pour les sous-éléments */
+      ul ul {
+        display: none;
+        background-color: #074508;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 250px;
+      }
+
+      li:hover ul {
+        display: block;
+      }
+
+      /* CSS pour les sous-éléments des éléments principaux */
+      li:hover li ul {
+        display: none;
+      }
+
+      li:hover li:hover ul {
+        display: block;
+      }
+
+      header h1 {
+        text-align: center;
+        flex: 1; /* Cela permet au titre de prendre l'espace restant */
+        margin-left: 20px; /* Ajustez la marge si nécessaire */
+      }
+
+      .page_submenu {
+        width: 15cm;
+      }
+
+      .page_submenu_industrie {
+        height: 8cm;
+      }
+
+      .back_image {
+        margin-left: 22%;
+      }
+
+      .container1,
+      .container2,
+      .container3 {
+        margin-top: 100px;
+        background-color: #ecfbe9;
+        width: 71%;
+        margin-left: 23%;
+        height: 15cm;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .item,
+      .item_image {
+        background-color: #ffffff;
+        text-align: center;
+        margin: 10px;
+        padding: 100px;
+        height: 10cm;
+        width: 8cm;
+        margin-top: 100px;
+      }
+
+      .item_image,
+      .img_item {
+        background-color: #84fa6d;
+        text-align: center;
+        height: 5cm;
+        width: 8cm;
+        margin-top: -99px;
+        position: relative;
+        margin-left: -99px;
+      }
+
+      .img_container3 img {
+        background-color: #ecfbe9;
+        text-align: center;
+        height: 5cm;
+        width: 8cm;
+        position: relative;
+        margin: 20px;
+        cursor: pointer;
+
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      footer li {
+        display: inline-block;
+      }
+      footer li a {
+        color: black;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/KISSI/SITE WEB/SITE/ACCEUIL/Acceuil.html">ACCEUIL</a></li>
+        <li>
+          <a href="/KISSI/SITE WEB/SITE/SERVICES/Services.html">NOS SERVICES</a>
+        </li>
+        <li>
+          <a>POLE SERVICE</a>
+          <ul>
+            <li>
+              <a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/AUDITS/audit.html"
+                >Audits</a
+              >
+              <ul class="page_submenu">
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/AUDITS/audit_diagnostic.html"
+                    >Audit diagnostic et de certification en QHSE</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/AUDITS/audit_systemes_information.html"
+                    >Audit des systèmes d’information</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/AUDITS/audit_management_mesure.html"
+                    >Audit des systèmes de management de mesure</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/AUDITS/audit_reglementaire.html"
+                    >Audit réglementaire Sécurité et Santé au travail</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/AUDITS/audit_securite_incendie.html"
+                    >Audit sécurité incendie (IGH, ERP)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/AUDITS/audit_environnemental.html"
+                    >Audit environnemental réglementaire de conformité et
+                    d’efficacité énergétique</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/KISSI/SITE WEB/SITE/POLE_SERVICE/CONSEILS/conseils.html"
+                >Conseils</a
+              >
+              <ul class="page_submenu">
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/CONSEILS/accompagnement_mise_en_place.html"
+                    >Accompagnement pour la mise en place des systèmes de
+                    management de la qualité sécurité et environnement</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/CONSEILS/accompagnement_certification.html"
+                    >Accompagnement en vue de la certification</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/CONSEILS/veille_reglementaire.html"
+                    >Veille réglementaire</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/CONSEILS/coaching_qse.html"
+                    >Coaching (suivi personnalisé en Q S E, Management)</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
+                href="/KISSI/SITE WEB/SITE/POLE_SERVICE/ETUDES_ET_MESURES/etudes_et_mesures.html"
+                >Etudes et mesures</a
+              >
+              <ul class="page_submenu">
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/ETUDES_ET_MESURES/etudes_lutte_contre_feu.html"
+                    >Etudes, Détermination et Installation des moyens de lutte
+                    contre le feu (Extincteur, RIA, etc.)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/ETUDES_ET_MESURES/etudes_eval_risques.html"
+                    >Réalisation des études de dangers et évaluation des risques
+                    , Procédés (HAZOP, HAZID, APR, etc.)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/ETUDES_ET_MESURES/etudes_plan_evacuation.html"
+                    >Réalisation de POI et Conception de plan d’évacuation ;
+                    Calcul des bilans carbone</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/ETUDES_ET_MESURES/etudes_gestion_dechets.html"
+                    >Environnement : Réalisation des plans de gestion, Etudes
+                    d'impact, Gestion des déchets et Aménagement du cadre de
+                    vie</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/ETUDES_ET_MESURES/etudes_analyse_cycle_vie.html"
+                    >Etudes d’analyse de cycle de vie des produits et processus
+                    (SiMapro, etc.)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/ETUDES_ET_MESURES/etudes_controle_qualite.html"
+                    >Contrôle qualité et Mesure des paramètres physico-chimiques
+                    (Bruit, luminosité, CO2, etc.)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/ETUDES_ET_MESURES/etudes_satisfaction_client.html"
+                    >Réalisation d’enquête de satisfaction client (Norme NF
+                    X506172)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/ETUDES_ET_MESURES/etudes_management_mesure.html"
+                    >Mise en place de système de Management de la Mesure</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/ETUDES_ET_MESURES/etudes_restructuration_entreprises.html"
+                    >Optimisation de périodicité d'étalonnage- Etude et
+                    restructuration des entreprises</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
+                href="/KISSI/SITE WEB/SITE/POLE_SERVICE/FORMATIONS/formations.html"
+                >Formations</a
+              >
+              <ul class="page_submenu">
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/FORMATIONS/formation_outils_qualite.html"
+                    >Outils de contrôle de la qualité (5S, 5M, AMDEC, SMED,
+                    KABAN, etc.)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/FORMATIONS/formation_iso.html"
+                    >ISO 9001, ISO 22000, ISO 14001, ISO 45001, etc..</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/FORMATIONS/formation_securite_incendie.html"
+                    >Sécurité incendie, ICPE et évaluation des risques</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/FORMATIONS/formation_feux_hydrocarbures.html"
+                    >Feux d'hydrocarbures et méthodes d'extinction</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/FORMATIONS/formation_eco_conception.html"
+                    >Eco-conception, traitement et recyclage des déchets, bilan
+                    carbone. Système de management QHSE et législation</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/FORMATIONS/formation_management_mesures.html"
+                    >Système de management des mesures et de la métrologie
+                    Formation des auditeurs internes en qualité, sécurité et
+                    environnement</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/FORMATIONS/formation_TDM.html"
+                    >TDM (Transporteurs de Matières Dangereuses). Formation de
+                    sauveteurs secouristes du travail (SST)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/FORMATIONS/formation_equipe_intervention.html"
+                    >Formation pour les équipiers de première et deuxième
+                    intervention (EPI & ESI)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_SERVICE/FORMATIONS/formation_CHSCT.html"
+                    >Formation des membres du CHSCT (analyse des risques)</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a>POLE TECHNOLOGIE</a>
+          <ul>
+            <li>
+              <a
+                href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/METEROLOGIE/métérologie.html"
+                >Métérologie</a
+              >
+              <ul class="page_submenu">
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/METEROLOGIE/dimensionnement_reservoir.html"
+                    >Dimensionnement du réservoir scanner laser 3D</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/METEROLOGIE/plans_fabrications.html"
+                    >Réalisation des plans de fabrications</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/METEROLOGIE/inventaire_stocks.html"
+                    >Inventaire de stocks et Relevé sur site</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/METEROLOGIE/editions_plans.html"
+                    >Editions des plans pour approbation</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/METEROLOGIE/numérisation_3D.html"
+                    >Numérisation 3D* Assistance technique</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/METEROLOGIE/baremage_reservoirs.html"
+                    >Barèmage des réservoirs (Horizontaux, Verticaux, des
+                    Sphères, au scanner laser 3D)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/METEROLOGIE/etalonnage_instruments_mesure.html"
+                    >Etalonnage des instruments de mesure (Pont bascules,
+                    Débitmètres, Balances, Clémur etc.)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/METEROLOGIE/travaux_tuyauterie.html"
+                    >Travaux de Tuyauterie : Sablage et peinture</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
+                href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/CONTROLE_ET_INSPECTIONS/controle_inspection.html"
+                >Controle et Inspections</a
+              >
+              <ul class="page_submenu">
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/CONTROLE_ET_INSPECTIONS/inspection_bacs_tuyauterie.html"
+                    >Inspection de bacs, tuyauterie, etc. (Détection de défauts,
+                    de corrosions et de fissures)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/CONTROLE_ET_INSPECTIONS/controle_recipients.html"
+                    >Contrôle de récipients sous pression, inoxydable, alambics
+                    en cuivre, non ferreux</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/CONTROLE_ET_INSPECTIONS/controle_epaisseur.html"
+                    >Contrôle d’épaisseur Contrôle et inspection en électricité
+                    (Thermographie infrarouge, Etc.)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/CONTROLE_ET_INSPECTIONS/mesure_analyse_vibratoire.html"
+                    >Mesure et analyse Vibratoire</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/CONTROLE_ET_INSPECTIONS/controle_geometrique.html"
+                    >Contrôle géométrique (Verticalité, Rotondité, Tassement
+                    différentiels)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/CONTROLE_ET_INSPECTIONS/inspection_decennale.html"
+                    >Inspection Décennale : Réservoirs, Sphères, Tuyauteries,
+                    Chaudières</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/CONTROLE_ET_INSPECTIONS/controle_non_destructifs.html"
+                    >Contrôle Non Destructifs (CND) :» Contrôle US (par
+                    Ultrason). Contrôle d’épaisseur (par ultrason)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/CONTROLE_ET_INSPECTIONS/controle_soudure_radiographie.html"
+                    >Contrôle par ressuyage. Contrôle par magnétoscopie.
+                    Contrôle ACFM. Contrôle MFL. Contrôle de soudure par
+                    radiographie</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
+                href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/VENTE_MATERIELS_ET_EQUIPEMENTS/vente_materiels.html"
+                >Vente de matériels et d'équipements</a
+              >
+              <ul class="page_submenu">
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/VENTE_MATERIELS_ET_EQUIPEMENTS/extincteurs_extinction_feux.html"
+                    >Extincteurs et systèmes d'extinction des feux</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/VENTE_MATERIELS_ET_EQUIPEMENTS/pictogrammes.html"
+                    >Pictogrammes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/VENTE_MATERIELS_ET_EQUIPEMENTS/affiches_panneaux.html"
+                    >Affiches et panneaux de signalisation etc.</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/VENTE_MATERIELS_ET_EQUIPEMENTS/equipements_protection_individuelle.html"
+                    >Equipements de Protection Individuelle (EPI): Chaussures,
+                    Lunettes, Casques, Blousons</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
+                href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/REALISATIONS_DE_TRAVAUX_ELECTRICITE/realisations_electricite.html"
+                >Réalisations de travaux d'électricité</a
+              >
+              <ul class="page_submenu">
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/REALISATIONS_DE_TRAVAUX_ELECTRICITE/audit_analyse_reseau_electrique.html"
+                    >Audit et analyse de réseau électrique</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/REALISATIONS_DE_TRAVAUX_ELECTRICITE/maintenance_electricite.html"
+                    >Maintenance (Prédictive, Systématique, Palliative et
+                    curative)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/REALISATIONS_DE_TRAVAUX_ELECTRICITE/installation_eclairage.html"
+                    >Installation de l’éclairage public et intérieur</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/REALISATIONS_DE_TRAVAUX_ELECTRICITE/cablage_armoire_electrique.html"
+                    >Câblage d’armoire électrique et de Tableautiers
+                    (Industriels et Tertiaires)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/REALISATIONS_DE_TRAVAUX_ELECTRICITE/installation_chauffe_eau.html"
+                    >Installation de chauffe-eau électrique et de tout autres
+                    appareillages</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/REALISATIONS_DE_TRAVAUX_ELECTRICITE/installation_unites_production.html"
+                    >Installation et câblage des unités de production</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/REALISATIONS_DE_TRAVAUX_ELECTRICITE/installation_groupes_electrogenes.html"
+                    >Installation de groupes électrogènes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/KISSI/SITE WEB/SITE/POLE_TECHNOLOGIE/REALISATIONS_DE_TRAVAUX_ELECTRICITE/mise_en_conformite_electricite.html"
+                    >Mise en conformité (électricité)</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a>POLE INDUSTRIES</a>
+          <ul class="page_submenu_industrie">
+            <li>
+              <a
+                href="/KISSI/SITE WEB/SITE/POLE_INDUSTRIES/recyclage_valorisation_dechets.html"
+                >Recyclage et valorisation des dechets</a
+              >
+            </li>
+            <li>
+              <a
+                href="/KISSI/SITE WEB/SITE/POLE_INDUSTRIES/centrale_incineration_dechets.html"
+                >Centrale d'incinération des déchets</a
+              >
+            </li>
+            <li>
+              <a href="/KISSI/SITE WEB/SITE/POLE_INDUSTRIES/autres.html"
+                >Autres
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="/KISSI/SITE WEB/SITE/CONTACTEZ_NOUS/Contactez_nous.html"
+            >CONTACT</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <header
+      style="
+        text-align: center;
+        background-color: #218e23;
+        padding: -4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      "
+    >
+      <div>
+        <img
+          src="/KISSI/SITE WEB/SITE/IMAGES/LOGO.png"
+          alt="Logo"
+          style="width: 80px; height: 70px; margin-left: 260px; margin-top: 5px"
+        />
+      </div>
+      <h1 style="margin: 0; font-family: Apple Chancery, cursive; color: white">
+        L'expertise et la technologie au service de votre performance!
+      </h1>
+    </header>
+
+    <div class="back_image">
+      <div class="box_image">
+        <img src="/KISSI/SITE WEB/SITE/IMAGES/nouveau fond.png" alt="" />
+      </div>
+    </div>
+
+    <h2
+      style="
+        background-color: #eef1ee;
+        border: 1px solid black;
+        width: 71%;
+        margin-left: 23%;
+        font-family: cursive;
+        margin-top: 90px;
+      "
+    >
+      Intégration des Industries Services et Technologies (2IST) est un cabinet
+      de renom spécialisé dans les domaines de la Qualité, de la Sécurité, de
+      l'Hygiène, de l'Environnement et de la Métrologie. Notre entreprise se
+      positionne en tant que partenaire privilégié des organismes, des
+      entreprises et des institutions, offrant une expertise complète pour
+      répondre à l'ensemble de leurs besoins dans ces domaines stratégiques.
+    </h2>
+
+    <div class="container1">
+      <div class="item">
+        <div class="item_image">
+          <img
+            src="/KISSI/SITE WEB/SITE/IMAGES/SERVICES/SERVICE5.png"
+            alt=""
+            class="img_item"
+          />
+        </div>
+        <h1 style="margin-top: 45px">AUDIT</h1>
+        <button
+          style="
+            margin-top: 40px;
+            color: white;
+            background-color: #1cb03c;
+            border: 1px solid rgb(17, 16, 16);
+          "
+        >
+          <a href="SITE WEB\SITE\POLE_SERVICE\AUDITS\audit.html"
+            >en savoir plus</a
+          >
+        </button>
+      </div>
+
+      <div class="item">
+        <div class="item_image">
+          <img
+            src="/KISSI/SITE WEB/SITE/IMAGES/SERVICES/SERVICE3.png"
+            alt=""
+            class="img_item"
+          />
+        </div>
+        <h1 style="margin-top: 45px; margin-left: -50px">FORMATIONS</h1>
+        <button
+          style="
+            margin-top: 40px;
+            color: white;
+            background-color: #1cb03c;
+            border: 1px solid rgb(17, 16, 16);
+          "
+        >
+          <a href="SITE WEB\SITE\POLE_SERVICE\FORMATIONS\formations.html"
+            >en savoir plus</a
+          >
+        </button>
+      </div>
+
+      <div class="item">
+        <div class="item_image">
+          <img
+            src="/KISSI/SITE WEB/SITE/IMAGES/SERVICES/SERVICE1.png"
+            alt=""
+            class="img_item"
+          />
+        </div>
+        <h1 style="margin-top: 45px; margin-left: -35px">RECYCLAGE</h1>
+        <button
+          style="
+            margin-top: 40px;
+            color: white;
+            background-color: #1cb03c;
+            border: 1px solid rgb(17, 16, 16);
+          "
+        >
+          <a
+            href="/KISSI/SITE WEB/SITE/POLE_INDUSTRIES/recyclage_valorisation_dechets.html"
+            >en savoir plus</a
+          >
+        </button>
+      </div>
+    </div>
+
+    <h2
+      style="
+        background-color: #eef1ee;
+        border: 1px solid black;
+        width: 71%;
+        margin-left: 23%;
+        font-family: cursive;
+        margin-top: 90px;
+      "
+    >
+      Le cabinet 2IST se distingue par son engagement inébranlable envers
+      l'excellence opérationnelle, la conformité aux normes internationales (ISO
+      9001, ISO 22000, ISO 14001, ISO 45001, ISO 17025, ISO 19011, 29001, 26000,
+      ISRS) et les meilleures pratiques de gestion. Notre approche
+      pluridimensionnelle nous permet de fournir des solutions sur mesure,
+      adaptées aux spécificités de chaque client, tout en garantissant une
+      approche globale et cohérente.
+    </h2>
+
+    <div class="container2">
+      <div class="item">
+        <div class="item_image">
+          <img
+            src="/KISSI/SITE WEB/SITE/IMAGES/SERVICES/SERVICE2.png"
+            alt=""
+            class="img_item"
+          />
+        </div>
+        <h1 style="margin-top: 45px">ETUDES</h1>
+        <button
+          style="
+            margin-top: 40px;
+            color: white;
+            background-color: #1cb03c;
+            border: 1px solid rgb(17, 16, 16);
+          "
+        >
+          <a
+            href="SITE WEB\SITE\POLE_SERVICE\ETUDES_ET_MESURES\etudes_satisfaction_client.html"
+            >en savoir plus</a
+          >
+        </button>
+      </div>
+
+      <div class="item">
+        <div class="item_image">
+          <img
+            src="/KISSI/SITE WEB/SITE/IMAGES/SERVICES/SERVICE4.png"
+            alt=""
+            class="img_item"
+          />
+        </div>
+        <h1 style="margin-top: 45px; margin-left: -50px">INDUSTRIES</h1>
+        <button
+          style="
+            margin-top: 40px;
+            color: white;
+            background-color: #1cb03c;
+            border: 1px solid rgb(17, 16, 16);
+          "
+        >
+          <a href="/KISSI/SITE WEB/SITE/POLE_INDUSTRIES/pole_industries.html"
+            >en savoir plus</a
+          >
+        </button>
+      </div>
+
+      <div class="item">
+        <div class="item_image">
+          <img
+            src="/KISSI/SITE WEB/SITE/IMAGES/SERVICES/SERVICE6.png"
+            alt=""
+            class="img_item"
+          />
+        </div>
+        <h1 style="margin-top: 45px; margin-left: -20px">AUTRES</h1>
+        <button
+          style="
+            margin-top: 40px;
+            color: white;
+            background-color: #1cb03c;
+            border: 1px solid rgb(17, 16, 16);
+          "
+        >
+          <a href="/KISSI/SITE WEB/SITE/POLE_INDUSTRIES/autres.html"
+            >en savoir plus</a
+          >
+        </button>
+      </div>
+    </div>
+
+    <h2
+      style="
+        background-color: #eef1ee;
+        border: 1px solid black;
+        width: 71%;
+        margin-left: 23%;
+        font-family: cursive;
+        margin-top: 90px;
+      "
+    >
+      Grâce à notre présence étendue dans plusieurs pays en Afrique et au-delà,
+      nous sommes en mesure de soutenir nos clients dans leurs projets
+      internationaux, en leur offrant un accompagnement expert et une
+      connaissance approfondie des réglementations locales et internationales.
+      Voici la liste de quelques partenaires.
+    </h2>
+
+    <div class="container3">
+      <div class="img_container3">
+        <img src="/KISSI/SITE WEB/SITE/IMAGES/partenaires/P1.png" alt="" />
+      </div>
+
+      <div class="img_container3">
+        <img src="/KISSI/SITE WEB/SITE/IMAGES/partenaires/P2.png" alt="" />
+      </div>
+
+      <div class="img_container3">
+        <img src="/KISSI/SITE WEB/SITE/IMAGES/partenaires/P3.png" alt="" />
+      </div>
+
+      <div class="img_container3">
+        <img src="/KISSI/SITE WEB/SITE/IMAGES/partenaires/P3.png" alt="" />
+      </div>
+
+      <div class="img_container3">
+        <img src="/KISSI/SITE WEB/SITE/IMAGES/partenaires/P4.png" alt="" />
+      </div>
+
+      <div class="img_container3">
+        <img src="/KISSI/SITE WEB/SITE/IMAGES/partenaires/P6.png" alt="" />
+      </div>
+    </div>
+
+    <footer
+      style="
+        margin-bottom: 0;
+        margin-top: 100px;
+        background-color: rgb(215, 211, 211);
+        width: 71%;
+        margin-left: 23%;
+        height: 100px;
+      "
+    >
+      <li>
+        <a href="https://www.linkedin.com/in/samuel-k-91225a224/"
+          >INFOS KISSI-BI</a
+        >
+      </li>
+      <li>
+        <a href="https://www.facebook.com/cabinet2ist/?locale=fr_FR"
+          >FACEBOOK</a
+        >
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/company/2ist/about/"
+          >REJOIGNEZ-NOUS</a
+        >
+      </li>
+      <li>Copyright 2023 KISSI-BI SAMUEL. All Right Reserved.</li>
+    </footer>
+  </body>
+</html>

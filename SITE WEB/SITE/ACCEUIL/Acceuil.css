@@ -1,0 +1,68 @@
+/* CSS pour la barre de navigation */
+nav {
+    background-color: #333; /* Couleur de fond de la barre de navigation */
+    width: 250px; /* Largeur de la barre de navigation */
+    height: 100vh; /* Hauteur de la barre de navigation (100% de la hauteur de l'écran) */
+    position: fixed; /* Barre de navigation fixée pour rester visible lors du défilement */
+    top: 0;
+    left: 0;
+  }
+  
+  ul {
+    list-style-type: none; /* Supprimer les puces des éléments de liste */
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    padding: 15px;
+  }
+  
+  li a {
+    color: white; /* Couleur du texte des éléments de la barre de navigation */
+    text-decoration: none; /* Supprimer le soulignement des liens */
+    display: block; /* Faire en sorte que les liens occupent tout l'espace du parent */
+  }
+  
+  li:hover {
+    background-color: #555; /* Couleur de fond au passage de la souris */
+  }
+  
+  /* CSS pour les sous-éléments */
+  ul ul {
+    display: none; /* Cacher les sous-éléments par défaut */
+    background-color: #444; /* Couleur de fond des sous-éléments */
+    position: absolute; /* Position absolue pour que les sous-éléments se superposent */
+    top: 0; /* Position verticale des sous-éléments par rapport au parent */
+    left: 100%; /* Position horizontale des sous-éléments par rapport au parent */
+    width: 250px; /* Largeur des sous-éléments */
+  }
+  
+  li:hover ul {
+    display: block; /* Afficher les sous-éléments au passage de la souris sur l'élément parent */
+  }
+  
+  /* CSS pour les sous-éléments des éléments principaux */
+  li:hover li ul {
+    display: none; /* Cacher les sous-éléments des éléments principaux au départ */
+  }
+  
+  li:hover li:hover ul {
+    display: block; /* Afficher les sous-éléments des éléments principaux au passage de la souris */
+  }
+
+  
+  .page_submenu_etudes_mesures{
+
+    width: 400px;
+  }
+
+  .page_submenu_formations{
+    width: 400px;
+  }
+
+
+.page_submenu_pole_industries{
+
+    height: 33vh;
+}
